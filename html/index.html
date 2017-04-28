@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FASTq Analyser</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" href="img/favicon-flask.ico">
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,600,400italic,600italic,700' rel='stylesheet' type='text/css'>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link href="css/app.css" rel="stylesheet" type="text/css">
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<link href="css/jqueryUI.css" rel="stylesheet" type="text/css">
+		<script src="js/jquery.js"></script>
+		<script src="js/jqueryUI.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/c.js"></script>
+		<script src="js/fastq.js"></script>
+		<script type="text/javascript" src="js/ploty.js"></script>
+	</head>
+	<body>
+		<div id="header">
+			<div class="logo">
+				<a><i class="fa fa-flask"></i><span>FASTq Analyser</span></a>
+			</div>
+		</div>
+		<div>
+			<div id="container">
+				<div class="content" id="mainCont">
+					<div class="sidebar">
+						<nav>
+							<h4 class="listTitle">By Position</h4>
+							<ul>
+								<li><div>Sequence Quality</div><div><i class="list-item fa fa-spinner fa-pulse"></i></div></li>
+								<li><div>Erronous Probability</div><div><i class="list-item fa fa-spinner fa-pulse"></i></div></li>
+								<li><div>Composition</div><div><i class="list-item fa fa-spinner fa-pulse"></i></div></li>
+								<li><div>GC Content</div><div><i class="list-item fa fa-spinner fa-pulse"></i></div></li>
+								<li><div>N Content</div><div><i class="list-item fa fa-spinner fa-pulse"></i></div></li>
+							</ul>
+							<h4 class="listTitle">By Read</h4>
+							<ul>
+								<li><div>Score Distribution</div><div><i class="list-item fa fa-spinner fa-pulse"></i></div></li>
+								<li><div>GC Content</div><div><i class="list-item fa fa-spinner fa-pulse"></i></div></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="mainInner" id="main-cont">
+						<div class="box cont-item">
+							<div class="box-top">
+								<div>Sequence quality</div>
+								<div><i class="chart-close fa fa-times-circle"></i></div>
+							</div>
+							<div class="box-panel">
+								<div class="chart-cont" id="bpSeqQuality"></div>
+							</div>
+						</div>
+						<div class="box cont-item">
+							<div class="box-top">
+								<div>Erronous Probability</div>
+								<div><i class="chart-close fa fa-times-circle"></i></div>
+							</div>
+							<div class="box-panel">
+								<div class="chart-cont" id="bpSeqProbability"></div>
+							</div>
+						</div>
+						<div class="box cont-item">
+							<div class="box-top">
+								<div>Position Composition</div>
+								<div><i class="chart-close fa fa-times-circle"></i></div>
+							</div>
+							<div class="box-panel">
+								<div class="chart-cont" id="positionComposition"></div>
+							</div>
+						</div>
+						<div class="box cont-item">
+							<div class="box-top">
+								<div>GC Content</div>
+								<div><i class="chart-close fa fa-times-circle"></i></div>
+							</div>
+							<div class="box-panel">
+								<div class="chart-cont" id="perBaseGCCont"></div>
+							</div>
+						</div>
+						<div class="box cont-item">
+							<div class="box-top">
+								<div>N Content</div>
+								<div><i class="chart-close fa fa-times-circle"></i></div>
+							</div>
+							<div class="box-panel">
+								<div class="chart-cont" id="perBaseNCont"></div>
+							</div>
+						</div>
+						<div class="box cont-item">
+							<div class="box-top">
+								<div>Read Score Distribution</div>
+								<div><i class="chart-close fa fa-times-circle"></i></div>
+							</div>
+							<div class="box-panel">
+								<div class="chart-cont" id="readScoreDistro"></div>
+							</div>
+						</div>
+						<div class="box cont-item">
+							<div class="box-top">
+								<div>GC Distribution</div>
+								<div><i class="chart-close fa fa-times-circle"></i></div>
+							</div>
+							<div class="box-panel">
+								<div class="chart-cont" id="seqGCDistro"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- #container -->
+	</body>
+</html>
