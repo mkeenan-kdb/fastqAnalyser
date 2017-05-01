@@ -28,5 +28,5 @@ This tool allows for efficient analysis fastq files (On my free 32bit version of
   6. After kdb+ has finished parising the file, all of the webhooks are exposed and the user can connect. Upon connection the calculated tables are queried and the results are sent back to the browser for further analysis.
   
   
-![alt tag](https://github.com/mkeenan-kdb/GameOfLife/blob/master/exampleFastQ.gif)
+![alt tag](https://github.com/mkeenan-kdb/fastqAnalyser/blob/master/exampleFastQ.gif)
   
