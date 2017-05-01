@@ -2,7 +2,7 @@
 
 Please checkout the gif at the bottom for the tool in action.
 
-This tool allows for efficient analysis fastq files. This tool was created over a weekend as a proof of concept. It is basically a copy of the publicly available tool - fastqc https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ 
+This tool allows for efficient analysis fastq files (On my free 32bit version of kdb+ on my old laptop a 2gb file takes around 3 minutes to execute - with 4 slaves). This tool was created over a weekend as a proof of concept. It is basically a copy of the publicly available tool - fastqc https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ 
 
 #####Source file description;
   *Source files are .fastq files - these are raw sequence reads from DNA sequencers
