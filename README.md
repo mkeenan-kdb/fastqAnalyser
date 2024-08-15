@@ -28,7 +28,10 @@ This tool allows for efficient analysis fastq files (On my free 32bit version of
   6. After kdb+ has finished parising the file, all of the webhooks are exposed and the user can connect. Upon connection the calculated tables are queried and the results are sent back to the browser for further analysis.
 
 
-https://github.com/user-attachments/assets/e24be5e0-0f0e-446b-bfb2-066da0b632cb
+
+https://github.com/user-attachments/assets/bab5f2a0-def5-4d36-b308-b690c22d5d86
+
+
 
 
 
