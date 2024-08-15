@@ -2,7 +2,7 @@
 
 Please checkout the gif at the bottom for the tool in action.
 
-This tool allows for efficient analysis fastq files (On my free 32bit version of kdb+ on my old laptop a 2gb file takes around 3 minutes to execute - with 4 slaves). This tool was created over a weekend as a proof of concept. It is basically a copy of the publicly available tool - fastqc https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ 
+This tool allows for efficient analysis fastq files (On my free 32bit version of kdb+ on my old laptop a 2gb file takes around 3 minutes to execute - with 4 threads). This tool was created over a weekend as a proof of concept. It is basically a copy of the publicly available tool - fastqc https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ 
 
 ##### Source file description;
   * Source files are .fastq files - these are raw sequence reads from DNA sequencers
@@ -22,11 +22,15 @@ This tool allows for efficient analysis fastq files (On my free 32bit version of
   2. The file contents are read info kdb+ as chunks;
     * If compressed, the file contents stream into a named pipe as the file decompresses. .Q.fps
     * If uncompressed, the file is read as chunks using .Q.fsn
-  3. Each chunk is sliced and sent out to the 4 slave threads (if the chunk has a number of records not divisible by 4 - aka a partial read, we simply hold onto it and prepend it to the following chunk)
-  4. In each slave, we map the ascii chars of each base score to their corresponding number - this is used to calculate the probabilities of each base
+  3. Each chunk is sliced and sent out to the 4 child threads (if the chunk has a number of records not divisible by 4 - aka a partial read, we simply hold onto it and prepend it to the following chunk)
+  4. In each child, we map the ascii chars of each base score to their corresponding number - this is used to calculate the probabilities of each base
   5. Aggregations by each base and by each sequence are done and the data is sent back to the main thread where it updates a global view of the currently caculated metrics
   6. After kdb+ has finished parising the file, all of the webhooks are exposed and the user can connect. Upon connection the calculated tables are queried and the results are sent back to the browser for further analysis.
-  
-  
-![alt tag](https://github.com/mkeenan-kdb/fastqAnalyser/blob/master/exampleFastQ.gif)
+
+
+https://github.com/user-attachments/assets/e24be5e0-0f0e-446b-bfb2-066da0b632cb
+
+
+
+
   
